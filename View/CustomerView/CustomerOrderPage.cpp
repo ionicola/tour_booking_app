@@ -1,15 +1,15 @@
-#include "CustomerHomePage.h"
-void CustomerHomePage()
+#include "CustomerOrderPage.h"
+
+void CustomerOrderPage()
 {
-    int choice;
     while (true)
     {
-        system("cls");
-        cout << "Welcome, " << GlobalUser.getFullname() << endl;
-        cout << "1. My Profile" << endl;
-        cout << "2. My Orders" << endl;
-        cout << "3. Find Tours" << endl;
-        cout << "4. Logout" << endl;
+        cout << "My Order" << endl;
+        int choice;
+        cout << "1. Processing order" << endl;
+        cout << "2. Completed order" << endl;
+        cout << "3. Cancelled order" << endl;
+        cout << "0. Back" << endl;
         cout << "Enter your choice: ";
         if (!(cin >> choice))
         {
@@ -17,7 +17,7 @@ void CustomerHomePage()
             cin.ignore(numeric_limits<streamsize>::max(), '\n');
             continue;
         }
-        else if (choice < 0 || choice > 4)
+        else if (choice < 0 || choice > 3)
         {
             continue;
         }
@@ -28,18 +28,15 @@ void CustomerHomePage()
             {
             case 1:
                 system("cls");
-                CustomerProfilePage();
+                CustomerProcessingOrderPage();
                 break;
             case 2:
                 system("cls");
-                CustomerOrderPage();
-                break;
+                // CustomerCompletedOrderPage();
             case 3:
                 system("cls");
-                // ToursPage();
-                break;
-            case 4:
-                system("cls");
+                // CustomerCancelledOrderPage();
+            case 0:
                 return;
             }
         }

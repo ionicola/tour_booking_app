@@ -7,6 +7,7 @@
 #include <limits>
 #include <fstream>
 #include <regex>
+#include <cctype>
 #include "json.hpp"
 using namespace std;
 using json = nlohmann::json;

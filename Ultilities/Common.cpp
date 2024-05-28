@@ -25,3 +25,38 @@ bool CheckLegitEmail(string email)
         return false;
     }
 }
+
+bool CheckLegitPassword(string password)
+{
+    if (password.length() < 8)
+    {
+        return false;
+    }
+
+    bool has_uppercase = false;
+    bool has_lowercase = false;
+    bool has_digit = false;
+    bool has_special_char = false;
+
+    for (char c : password)
+    {
+        if (isupper(c))
+        {
+            has_uppercase = true;
+        }
+        else if (islower(c))
+        {
+            has_lowercase = true;
+        }
+        else if (isdigit(c))
+        {
+            has_digit = true;
+        }
+        else if (ispunct(c) || c == ' ')
+        {
+            has_special_char = true;
+        }
+    }
+
+    return has_uppercase && has_lowercase && has_digit && has_special_char;
+}

@@ -109,6 +109,13 @@ void CustomerChangePassword()
     {
         cout << "Enter your new password: ";
         getline(cin, newPassword);
+        if (!CheckLegitPassword(newPassword))
+        {
+            cout << "Failed. Your new password is wrong format." << endl;
+            cout << "Our format: have at least 8 characters including at least 1 uppercase letter,\n1 lowercase letter, 1 number and 1 special character." << endl;
+            system("pause");
+            return;
+        }
         if (GlobalUser.getPassword() != newPassword)
         {
             GlobalUser.setPassword(newPassword);

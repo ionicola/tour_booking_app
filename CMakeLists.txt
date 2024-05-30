@@ -7,6 +7,10 @@ set(SOURCES
     Controller/LoginController/LoginNavigator.cpp 
     DataSource/UserDataSource.cpp 
     Model/User.cpp 
+    Model/Accommodation.cpp
+    Model/Order.cpp
+    Model/Tour.cpp
+    Model/Vehicle.cpp
     View/CustomerView/CustomerHomePage.cpp 
     View/CustomerView/CustomerProfilePage.cpp 
     Controller/CustomerController/CustomerEditProfileController.cpp
@@ -22,6 +26,10 @@ set(HEADERS
     Controller/LoginController/LoginNavigator.h 
     DataSource/UserDataSource.h 
     Model/User.h
+    Model/Accommodation.h
+    Model/Order.h
+    Model/Tour.h
+    Model/Vehicle.h
     View/CustomerView/CustomerHomePage.h
     View/CustomerView/CustomerProfilePage.h 
     Controller/CustomerController/CustomerEditProfileController.h

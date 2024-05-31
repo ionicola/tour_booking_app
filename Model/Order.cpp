@@ -1,6 +1,6 @@
 #include "Order.h"
 Order::Order() {}
-Order::Order(string username, string id, string tourId, string vehicleId, string accommodationId, string number_of_people, vector<Room> rooms, string price) : username(username), id(id), tourId(tourId), vehicleId(vehicleId), accommodationId(accommodationId), number_of_people(number_of_people), rooms(rooms), price(price) {}
+Order::Order(string username, string id, string tourId, string vehicleId, string accommodationId, string number_of_people, vector<RoomOrdered> rooms) : username(username), id(id), tourId(tourId), vehicleId(vehicleId), accommodationId(accommodationId), number_of_people(number_of_people), rooms(rooms) {}
 string Order::getUsername()
 {
     return username;
@@ -25,12 +25,9 @@ string Order::getNumberOfPeople()
 {
     return number_of_people;
 }
-vector<Room> Order::getRooms()
+vector<RoomOrdered> Order::getRooms()
 {
     return rooms;
-}
-string Order::getPrice()
-{
 }
 void Order::setUsername(string username)
 {
@@ -56,13 +53,9 @@ void Order::setNumberOfPeople(string number_of_people)
 {
     this->number_of_people = number_of_people;
 }
-void Order::setRooms(vector<Room> rooms)
+void Order::setRooms(vector<RoomOrdered> rooms)
 {
     this->rooms = rooms;
-}
-void Order::setPrice(string price)
-{
-    this->price = price;
 }
 Order &Order::operator=(const Order &other)
 {
@@ -73,6 +66,5 @@ Order &Order::operator=(const Order &other)
     this->accommodationId = other.accommodationId;
     this->number_of_people = other.number_of_people;
     this->rooms = other.rooms;
-    this->price = other.price;
     return *this;
 }

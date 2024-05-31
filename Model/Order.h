@@ -4,6 +4,15 @@
 #include "Tour.h"
 #include "Vehicle.h"
 #include "Accommodation.h"
+struct RoomOrdered
+{
+    string id;
+    string name;
+    string slot;
+    string price;
+    string start;
+    string end;
+};
 class Order
 {
 private:
@@ -13,29 +22,25 @@ private:
     string vehicleId;
     string accommodationId;
     string number_of_people;
-    vector<Room> rooms;
-    string price;
+    vector<RoomOrdered> rooms;
 
 public:
     Order();
-    Order(string username, string id, string tourId, string vehicleId, string accommodationId, string number_of_people, vector<Room> rooms, string price);
+    Order(string username, string id, string tourId, string vehicleId, string accommodationId, string number_of_people, vector<RoomOrdered> rooms);
     string getUsername();
     string getId();
     string getTourId();
     string getVehicleId();
     string getAccommodationId();
     string getNumberOfPeople();
-    vector<Room> getRooms();
-    string getPrice();
+    vector<RoomOrdered> getRooms();
     void setUsername(string username);
     void setId(string id);
     void setTourId(string tourId);
     void setVehicleId(string vehicleId);
     void setAccommodationId(string accommodationId);
     void setNumberOfPeople(string number_of_people);
-    void setRooms(vector<Room> rooms);
-    void setPrice(string price);
+    void setRooms(vector<RoomOrdered> rooms);
     Order &operator=(const Order &other);
 };
-#include "Order.h"
 #endif

@@ -16,6 +16,8 @@ set(SOURCES
     Controller/CustomerController/CustomerEditProfileController.cpp
     Ultilities/Common.cpp
     View/CustomerView/CustomerOrderPage.cpp
+    DataSource/OrderDataSource.cpp
+    Controller/CustomerController/CustomerOrderController.cpp
 
 )
 
@@ -35,6 +37,8 @@ set(HEADERS
     Controller/CustomerController/CustomerEditProfileController.h
     Ultilities/Common.h
     View/CustomerView/CustomerOrderPage.h
+    DataSource/OrderDataSource.h
+    Controller/CustomerController/CustomerOrderController.cpp
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})

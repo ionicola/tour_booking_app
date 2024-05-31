@@ -22,7 +22,7 @@ private:
     vector<Room> rooms;
 
 public:
-    Accommodation() {}
+    Accommodation();
     Accommodation(string id, string name, string address, vector<Room> rooms);
     string getId();
     string getName();
@@ -32,7 +32,6 @@ public:
     void setName(string name);
     void setAddress(string address);
     void setRooms(vector<Room> rooms);
-
 };
 
 #endif

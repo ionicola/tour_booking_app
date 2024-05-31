@@ -3,6 +3,7 @@ void CustomerProfilePage()
 {
     while (true)
     {
+        system("cls");
         cout << "My Profile" << endl;
         cout << "Username\t: " << GlobalUser.getUsername() << endl;
         cout << "Password\t: ********" << endl;

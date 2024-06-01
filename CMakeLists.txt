@@ -18,6 +18,7 @@ set(SOURCES
     View/CustomerView/CustomerOrderPage.cpp
     DataSource/OrderDataSource.cpp
     Controller/CustomerController/CustomerOrderController.cpp
+    DataSource/TourDataSource.cpp
 
 )
 
@@ -38,7 +39,8 @@ set(HEADERS
     Ultilities/Common.h
     View/CustomerView/CustomerOrderPage.h
     DataSource/OrderDataSource.h
-    Controller/CustomerController/CustomerOrderController.cpp
+    Controller/CustomerController/CustomerOrderController.h
+    DataSource/TourDataSource.h
 )
 
 add_executable(${PROJECT_NAME} ${SOURCES} ${HEADERS})

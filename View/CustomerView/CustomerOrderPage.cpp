@@ -96,7 +96,8 @@ void ViewOrderProcessingPage()
         int i = 1;
         for (auto &order : orders)
         {
-            cout << i << ". " << order.getId() << endl;
+            Tour t = GetTourById(order.getTourId());
+            cout << i << ". Booking code: " << order.getId() << ", from: " << t.getDeparture() << " " << t.getStart() << ", to: " << t.getDestination() << endl;
             i++;
         }
         int choice;
